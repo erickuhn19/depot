@@ -56,7 +56,7 @@ class ProductTest < ActiveSupport::TestCase
 			image_url: "fred.gif")
 			assert product.invalid?
 			assert_equal ["has already been taken"],
-		product.error[:title]
+		product.errors[:title]
 	end
 
 	test "product is not valid without a unique title - i18n" do
