@@ -61,7 +61,7 @@ class LineItemsController < ApplicationController
     @line_item = LineItem.find(params[:id])
     @line_item.destroy
     respond_to do |format|
-      format.html { redirect_to store_url, notice: 'The item was removed from your cart.' }
+      format.html { redirect_to store_url }
       format.json { head :no_content }
     end
   end
