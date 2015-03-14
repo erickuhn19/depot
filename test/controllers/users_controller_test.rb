@@ -37,6 +37,7 @@ class UsersControllerTest < ActionController::TestCase
   test "should update user" do
     patch :update, id: @user, user: { name: @user.name, password: 'secret', password_confirmation: 'secret' }
     assert_redirected_to user_path
+  end
 
   test "should destroy user" do
     assert_difference('User.count', -1) do
